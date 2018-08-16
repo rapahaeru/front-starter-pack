@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 
-import Button from '../containers/button';
 import Phrase from '../components/phrase'
 
 import { connect } from 'react-redux';
@@ -8,26 +7,14 @@ import { connect } from 'react-redux';
 
 import { clickButton } from '../actions/index';
 
-class App extends Component {
+import ButtonNative from '../containers/button_native'
+import { Button } from '@cathodevel/quantum';
 
-    constructor() {
-        super();
-        // this.state = {
-        //     phraseText: "React opaaa starter"
-        // }
-    }
-  
-  // componentDidMount(){
-  //   this.setState({ phraseText: this.props.contentClicked })
-  // }
+class App extends Component {
 
   buttonClicked = () => {
     this.props.clickButton("blablabla");
-    // console.log(this.props.contentClicked);
-    // this.setState({ phraseText: this.props.contentClicked })
-    // console.log(this.state);
-};
-
+  }
 
   render() {
     console.log(this.props);
@@ -36,8 +23,8 @@ class App extends Component {
       <Fragment>
         <Phrase content={this.props.contentClicked} />
         <div>
-            <Button actionClick={ this.buttonClicked } />
-            {/* <button onClick={ () => { this.buttonClicked() } }> BOTAO </button> */}
+           <Button />
+           <ButtonNative actionClick={ this.buttonClicked } />
         </div>
       </Fragment> 
     );
@@ -45,11 +32,9 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log("mAP: ", state.click);
   return {
       contentClicked: state.click
   };
-
 }
 
 // function mapDispatchToProps(dispatch) {

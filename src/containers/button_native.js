@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 
 
-class Button extends Component {
+class ButtonNative extends Component {
 
     render() {
         return <button onClick={this.props.actionClick}> botão </button>
     }
-
 }
 
-export default Button;
+export default ButtonNative;

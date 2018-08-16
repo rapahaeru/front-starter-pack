@@ -1,6 +1,8 @@
 import { CLICK } from '../actions/index';
 
-export default function(state = "", action) {
+const contentClicked = "alecrim dourado";
+
+export default function(state = contentClicked, action) {
     // console.log("reducer: ", action);
     switch(action.type) {
         case CLICK:

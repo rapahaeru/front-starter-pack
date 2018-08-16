@@ -8,9 +8,8 @@ import { connect } from 'react-redux';
 import { clickButton } from '../actions/index';
 
 import ButtonNative from '../containers/button_native'
-import { Button } from '@cathodevel/quantum';
 
-class App extends Component {
+class JobadDetail extends Component {
 
   buttonClicked = () => {
     this.props.clickButton("blablabla");
@@ -21,10 +20,11 @@ class App extends Component {
 
     return (
       <Fragment>
-        <Phrase content={this.props.contentClicked} />
-        <div>
-           <Button />
-           <ButtonNative actionClick={ this.buttonClicked } />
+        <div className="jobad-container">
+          <Phrase content={this.props.contentClicked} />
+          <div>
+            <ButtonNative actionClick={ this.buttonClicked } />
+          </div>
         </div>
       </Fragment> 
     );
@@ -44,4 +44,4 @@ function mapStateToProps(state) {
 // }
 
 
-export default connect(mapStateToProps, { clickButton })(App);
+export default connect(mapStateToProps, { clickButton })(JobadDetail);

@@ -4,9 +4,15 @@ body {
 	font-family: "verdana";
 }
 
-.container {
+.jobad-form-container {
 	margin: auto;
 	max-width: 1024px;
+	padding: 1em;
+	border: 1px solid $black;
+}
+
+.jobad-container {
+	margin: auto;
 	padding: 1em;
 	border: 1px solid $black;
 }

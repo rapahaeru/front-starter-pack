@@ -1,12 +1,12 @@
 body {
-	background-color: $gray;
+	background-color: $white;
 	color: $black;
 	font-family: "verdana";
-	margin: auto;
-	max-width: 1024px;
-	padding: 1em;
 }
 
 .container {
-	background-color: $white;
+	margin: auto;
+	max-width: 1024px;
+	padding: 1em;
+	border: 1px solid $black;
 }

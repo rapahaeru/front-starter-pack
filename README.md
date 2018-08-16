@@ -1,25 +1,34 @@
-# ReduxSimpleStarter
+# Front starter pack (suggestion)
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+
 
 ### Getting Started
 
-There are two methods for getting started with this repo.
+- Clone o repositório
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
+- Instale os pacotes
 ```
 > npm install
+```
+
+- Exporte o css (escrito em scss)
+```
+> npm run build:css
+```
+
+- Inicie a aplicação
+
+```
 > npm start
 ```
+ 
+- No desenvolvimento, levante o "watch" para observar todas as alterações de css e exportar na pasta "public/css"
+
+```
+> npm run watch:css
+```
+
+
+### Credits
+
+Based on [Redux Simple Starter](https://github.com/StephenGrider/ReduxSimpleStarter) of [Stephen Grider](https://github.com/StephenGrider) 

@@ -4,7 +4,7 @@ import Button from '../containers/button';
 import Phrase from '../components/phrase'
 
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 
 import { clickButton } from '../actions/index';
 
@@ -12,33 +12,32 @@ class App extends Component {
 
     constructor() {
         super();
-        this.state = {
-            phraseText: "React opaaa starter"
-        }
+        // this.state = {
+        //     phraseText: "React opaaa starter"
+        // }
     }
   
   // componentDidMount(){
   //   this.setState({ phraseText: this.props.contentClicked })
   // }
 
-  buttonClicked(event) {
+  buttonClicked = () => {
     this.props.clickButton("blablabla");
     // console.log(this.props.contentClicked);
-    this.setState({ phraseText: this.props.contentClicked })
-    console.log(this.state);
+    // this.setState({ phraseText: this.props.contentClicked })
+    // console.log(this.state);
 };
 
 
   render() {
-    console.log(this.state);
+    console.log(this.props);
 
     return (
       <Fragment>
-        <h1>{this.props.contentClicked}</h1>
-        <Phrase content={this.state.phraseText} />
+        <Phrase content={this.props.contentClicked} />
         <div>
-            {/* <Button actionClick={  } /> */}
-            <button onClick={ () => { this.buttonClicked() } }> BOTAO </button>
+            <Button actionClick={ this.buttonClicked } />
+            {/* <button onClick={ () => { this.buttonClicked() } }> BOTAO </button> */}
         </div>
       </Fragment> 
     );
@@ -53,11 +52,11 @@ function mapStateToProps(state) {
 
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({
-      clickButton: clickButton
-  }, dispatch);
-}
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators({
+//       clickButton: clickButton
+//   }, dispatch);
+// }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, { clickButton })(App);

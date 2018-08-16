@@ -1,12 +1,38 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
+import { clickButton } from '../actions/index';
 
 class Button extends Component {
 
+    buttonClicked() {
+        this.props.clickButton("blablabla");
+        // console.log(this.props.contentClicked);
+        this.setState({ phraseText: this.props.contentClicked })
+        console.log(this.state);
+    };
+
     render() {
-        return <button onClick={this.props.actionClick()}> botão </button>
+        // console.log(this.props.actionClick());
+        return <button onClick={this.buttonClicked()}> botão </button>
     }
 
 }
 
-export default Button;
+function mapStateToProps(state) {
+    return {
+        contentClicked: state.click
+    };
+  
+  }
+  
+  function mapDispatchToProps(dispatch) {
+    return bindActionCreators({
+        clickButton: clickButton
+    }, dispatch);
+  }
+  
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(Button);
+  

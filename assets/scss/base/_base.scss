@@ -1,7 +1,8 @@
 body {
 	background-color: $white;
-	color: $black;
+	color: $strong-gray;
 	font-family: "verdana";
+	font-size: 16px;
 }
 
 .jobad-form-container {
@@ -13,6 +14,4 @@ body {
 
 .jobad-container {
 	margin: auto;
-	padding: 1em;
-	border: 1px solid $black;
 }

@@ -1,0 +1,115 @@
+@import "settings/color";
+
+.jobad-detail-header {
+    border-bottom: 1px solid $border-line-color-blue;
+    display: flex;
+    margin-bottom: 0.5em;
+    padding: 0.5em 0;
+    justify-content: space-between;
+
+    // logo da catho vindo do quantum
+    .logo {
+        vertical-align: middle;
+    }
+
+    .user-area {
+        margin-right: 0.5em;
+    }
+
+    .user-thumb {
+        border-left: 1px solid $light-gray;
+        display: block;
+        float: right;
+        height: 61px;
+        min-height: 37px;
+        max-height: 45px;
+        padding-left: 1em;
+    }
+
+    .user-info {
+        color: $dark-gray;
+        float: right;
+        
+        a {
+            display: block;
+            text-align: right;
+        }
+    }
+}
+
+.jobad-description, .jobad-details,  .company-info {
+    margin: 0 0.5em;
+}
+
+.jobad-info-vacant, .jobad-info, .company-name {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.jobad-description {
+    display: block;
+
+    h1 {
+        color: $strong-gray;
+        font-size: 2em;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+}
+
+.description {
+    p {
+        width: 100%;
+    }
+}
+
+.jobad-info {
+    address {
+        display: inline-block;
+    }
+}
+
+.curriculum-status-mobile {
+    display: block;
+    border-top: 1px solid $soft-gray;
+    bottom: 0;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+
+    button {
+        width: 100%;
+    }
+}
+
+.curriculum-status-desktop {
+    display: none;
+}
+
+@media (min-width: 550px){
+
+    .jobad-info-vacant {
+        float: right;
+    }
+
+    .description {
+        p {
+            width: calc(100% - 10em);
+            max-width: 750px;
+        }
+    }
+    
+    .curriculum-status-desktop {
+        display: block;
+        float: right;
+        height: 60px;
+        width: 10em;
+    }
+
+    .curriculum-status-mobile {
+        display: none;
+    }    
+
+}
+

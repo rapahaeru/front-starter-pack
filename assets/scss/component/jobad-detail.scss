@@ -1,7 +1,7 @@
 @import "settings/color";
 
 .jobad-detail-header {
-    border-bottom: 1px solid $border-line-color-blue;
+    border-bottom: 1px solid $endeavour;
     display: flex;
     margin-bottom: 0.5em;
     padding: 0.5em 0;
@@ -17,7 +17,7 @@
     }
 
     .user-thumb {
-        border-left: 1px solid $light-gray;
+        border-left: 1px solid $seashell;
         display: block;
         float: right;
         height: 61px;
@@ -27,7 +27,7 @@
     }
 
     .user-info {
-        color: $dark-gray;
+        color: $dove-gray;
         float: right;
         
         a {
@@ -50,7 +50,7 @@
     display: block;
 
     h1 {
-        color: $strong-gray;
+        color: $dusty-gray;
         font-size: 2em;
         font-weight: 700;
         margin-bottom: 0.5rem;
@@ -72,7 +72,7 @@
 
 .curriculum-status-mobile {
     display: block;
-    border-top: 1px solid $soft-gray;
+    border-top: 1px solid $alto;
     bottom: 0;
     height: 60px;
     position: fixed;

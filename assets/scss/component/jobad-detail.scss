@@ -1,10 +1,10 @@
-@import "settings/color";
+@import "settings/all";
 
 .jobad-detail-header {
     border-bottom: 1px solid $endeavour;
     display: flex;
-    margin-bottom: 0.5em;
-    padding: 0.5em 0;
+    margin-bottom: map-get($space, small);
+    padding: map-get($space, small) 0;
     justify-content: space-between;
 
     // logo da catho vindo do quantum
@@ -13,7 +13,7 @@
     }
 
     .user-area {
-        margin-right: 0.5em;
+        margin-right: map-get($space, small);;
     }
 
     .user-thumb {
@@ -38,12 +38,12 @@
 }
 
 .jobad-description, .jobad-details,  .company-info {
-    margin: 0 0.5em;
+    margin: 0 map-get($space, small);;
 }
 
 .jobad-info-vacant, .jobad-info, .company-name {
     display: block;
-    margin-bottom: 0.5em;
+    margin-bottom: map-get($space, small);;
 }
 
 .jobad-description {
@@ -53,7 +53,7 @@
         color: $dusty-gray;
         font-size: 2em;
         font-weight: 700;
-        margin-bottom: 0.5rem;
+        margin-bottom: map-get($space, small);;
     }
 
 }
